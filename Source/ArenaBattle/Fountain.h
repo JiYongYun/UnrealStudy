@@ -2,7 +2,8 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
+//#include "CoreMinimal.h"	// 예제코드에선 해당 해더 파일주석 후 아래 해더파일 선언. 64페이지 확인
+#include "EngineMinimal.h" 
 #include "GameFramework/Actor.h"
 #include "Fountain.generated.h"
 
@@ -22,5 +23,11 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	UPROPERTY(VisibleAnywhere)
+	UStaticMeshComponent *Body;
+
+	UPROPERTY(VisibleAnywhere)
+	UStaticMeshComponent *Water;
 
 };
